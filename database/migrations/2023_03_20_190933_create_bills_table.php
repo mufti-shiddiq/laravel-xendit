@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('bills', function (Blueprint $table) {
             $table->id();
-            $table->string('doc_no')->nullable();
+            $table->string('trx_no')->nullable();
             $table->text('description')->nullable();
             $table->integer('amount')->default(0);
             $table->string('payment_status')->nullable();

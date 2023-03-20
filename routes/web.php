@@ -22,4 +22,5 @@ Route::prefix('bill')->group(function () {
     Route::get('/', [BillController::class, 'index'])->name('bill.index');
     Route::get('/create', [BillController::class, 'create'])->name('bill.create');
     Route::post('/store', [BillController::class, 'store'])->name('bill.store');
+    Route::post('/callback', [BillController::class, 'callback']);
 });

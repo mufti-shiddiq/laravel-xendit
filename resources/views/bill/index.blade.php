@@ -24,7 +24,7 @@
                         <thead>
                             <tr>
                                 <th>NO</th>
-                                <th>DOC NO</th>
+                                <th>TRX NO</th>
                                 <th>AMOUNT</th>
                                 <th>DESCRIPTION</th>
                                 <th>PAYMENT STATUS</th>
@@ -39,7 +39,7 @@
                                     <td>{{ number_format($dt->amount, 0, ',', '.') }}</td>
                                     <td>{{ $dt->description }}</td>
                                     <td>{{ $dt->payment_status }}</td>
-                                    <td>{{ $dt->payment_link }}</td>
+                                    <td><a href="{{ $dt->payment_link }}" target="_BLANK">{{ $dt->payment_link }}</a></td>
                                 </tr>
                             @endforeach
                         </tbody>
